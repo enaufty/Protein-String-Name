@@ -20,7 +20,7 @@ codon_table = {
 stop = {"UAA": "Stop", "UAG": "Stop", "UGA": "Stop"}
 codon_table.update(stop)
 
-sequence = "CAUGCUCCUAUGGAAAUUUCUUUUCGUGAAGCUCAAUAUGCUUCUUUUUCUGCUUGGUGGUAUUAA"
+sequence = "GUUUAUUGGAUGGAAAUUUCUUUUCGUGAAGCUCAAUAUGCUUCUUUUUCUGCUUGGUGGUAUUAA"
 start_index = sequence.find("AUG")
 i = start_index
 protein = ""
