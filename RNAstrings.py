@@ -20,11 +20,12 @@ codon_table = {
 stop = {"UAA": "Stop", "UAG": "Stop", "UGA": "Stop"}
 codon_table.update(stop)
 
-s = "AUGUAUGGUGCUGAUUUUCGUGAAGAUUAUUUUGCUUCUCCUGAACGUCAUGCUCGUCAUGCUCGUCAUGCUCGUUAA"
-i = 0
+sequence = "AUGGAAAUUUCUUUUCGUGAAGCUCAAUAUGCUUCUUUUUCUGCUUGGUGGUAUUAA"
+start_index = sequence.find("AUG")
+i = start_index
 protein = ""
-while i < len(s):
-    codon = s[i:i+3]
+while i < len(sequence):
+    codon = sequence[i:i + 3]
     aa = codon_table.get(codon, None)
     if aa is None:
         print("Unknown:", codon)
