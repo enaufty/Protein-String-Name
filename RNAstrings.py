@@ -20,7 +20,7 @@ codon_table = {
 stop = {"UAA": "Stop", "UAG": "Stop", "UGA": "Stop"}
 codon_table.update(stop)
 
-sequence = "CAUGUUACUCCUAUGGAAAUUUCUUUUCGUGAAGCUCAAUAUGCUUCUUUUUCUGCUUGGUGGUAUUAA"
+sequence = "CAUGCUCCUAUGGAAAUUUCUUUUCGUGAAGCUCAAUAUGCUUCUUUUUCUGCUUGGUGGUAUUAA"
 start_index = sequence.find("AUG")
 i = start_index
 protein = ""
@@ -35,3 +35,4 @@ while i < len(sequence):
     protein += aa
     i += 3
 print(f"Your protein is: {protein}")
+
