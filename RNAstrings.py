@@ -45,8 +45,13 @@ codon_table.update(stop)
 
 
 sequence = "GUUUAUUGGAUGGAAAUUUCUUUUCGUGAAGCUCAAUAUGCUUCUUUUUCUGCUUGGUGGUAUUAA"
-start_index = sequence.find("AUG")
-i = start_index
+i = 0
+while i + 3 <= len(sequence):
+    codon = sequence[i:i + 3]
+    if codon == "AUG":
+        start_index = i
+        break
+    i += 1
 protein = ""
 while i < len(sequence):
     codon = sequence[i:i + 3]
